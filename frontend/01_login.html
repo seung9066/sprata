@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+      <!-- 아래 3줄은 폰트 주소 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+                /* * 태그는 모든 태그에 적용 */
+        *{
+            font-family: 'Nanum Pen Script', cursive;
+        }
+        .mytitle {
+            background-color: gray;
+            background-size: cover;
+            background-position: center;
+
+            width: 300px;
+            height: 200px;
+
+            color: white;
+            text-align: center;
+            padding-top: 50px;
+
+            border-radius: 10px;
+        }
+
+        .wrap{
+            width: 300px;
+            margin: auto; /* 양쪽동등 */
+        }
+
+        .mybtn{
+            width: 100px;
+            margin: auto; /* 글 속성은 가로세로 속성이 없기에 박스 속성으로 변경 위해 display: block; */
+            display: block;
+        }
+
+        .gray-font /* class는 여러개를 묶을 수 있다. */ {
+            color: gray;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="mytitle">
+            <h1>로그인 페이지</h1>
+            <h2>아이디, 패스워드를 입력해 주세요.</h2>
+        </div>
+
+        <p>ID : <input type ="text" /> </p>
+        <p>PW : <input type="text"/> </p>
+        <button class="mybtn gray-font">로그인하기</button>
+    </div>
+</body>
+</html>
