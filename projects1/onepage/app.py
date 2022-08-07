@@ -1,3 +1,5 @@
+import datetime
+
 from flask import Flask, render_template, jsonify, request
 
 app = Flask(__name__)
@@ -15,6 +17,23 @@ def homework():
     return render_template('index.html')
 
 
+# 회원가입
+@app.route('/login', methods=['POST'])
+def account_login():
+    id_receive = request.form['id_give']
+    name_receive = request.form['name_give']
+    pw_receive = request.form['pw_give']
+
+    user = {
+        'userid': id_receive,
+        'name': name_receive,
+        'pw': pw_receive
+    }
+    db.login.insert_one(user)
+
+    return jsonify({'result': 'success', 'msg': '회원가입 완료!'})
+
+
 # 주문하기(POST) API
 @app.route('/order', methods=['POST'])
 def save_order():
@@ -24,14 +43,16 @@ def save_order():
     phone_receive = request.form['phone_give']
 
     doc = {
+        'date': datetime.date.today().strftime("%Y/%m/%d"),
         'name': name_receive,
         'count': count_receive,
         'address': address_receive,
         'phone': phone_receive
+
     }
     db.orders.insert_one(doc)
 
-    return jsonify({'result': 'success', 'msg': '주문 완료!'})
+    return jsonify({'result': 'success', 'msg': '등록 완료!'})
 
 
 # 주문 목록보기(Read) API
