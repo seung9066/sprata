@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f46d97a9-da9a-43f4-82ed-2de10ce8dd70" name="변경" comment="a">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects1/onepage/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects1/onepage/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects1/onepage/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects1/onepage/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,7 +159,7 @@
       <workItem from="1660032391731" duration="20635000" />
       <workItem from="1660058223825" duration="6122000" />
       <workItem from="1660074133149" duration="2620000" />
-      <workItem from="1660108268947" duration="9317000" />
+      <workItem from="1660108268947" duration="9908000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1659891528925</created>
@@ -169,7 +168,21 @@
       <option name="project" value="LOCAL" />
       <updated>1659891528925</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="a">
+      <created>1660117984788</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660117984788</updated>
+    </task>
+    <task id="LOCAL-00003" summary="a">
+      <created>1660118043531</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660118043531</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
