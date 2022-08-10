@@ -4,7 +4,8 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scable=no, maximum-scale=1, minimum-scale=1">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -42,12 +43,11 @@
         }
 
         .myitem {
-            width: 100%;
+            background-color: #A5D6D9;
             height: 240px;
-
-            background-image: url("https://us.123rf.com/450wm/sonyakamoz/sonyakamoz1609/sonyakamoz160900139/62916690-하늘색-파스텔-색상으로-칠해진-된-나무-질감-벽지-및-배경.jpg");
-            background-position: center;
-            background-size: cover;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 1%;
         }
 
         .price {
@@ -69,20 +69,167 @@
             width: 100px;
             margin: auto;
             display: block;
+            float: left;
+        }
+
+        .mybtn1 {
+            width: 100px;
+            margin: auto;
+            display: block;
+            background-color: #444444;
+            float: right;
+            border: 0;
+            outline: 0;
+        }
+
+        .mybtn2 {
+            width: 100px;
+            margin: auto;
+            display: block;
+            background-color: #999999;
+            border: 0;
+            outline: 0;
         }
 
         .wrap {
-            margin: auto;
             width: 500px;
+            float: left;
+            margin-left: 7%;
+            margin-right: 5%;
         }
 
         .wrap1 {
-            margin: auto;
-            width: 650px;
+            width: 900px;
+            float: right;
+            margin-right: 7%;
+            margin-left: 5%;
         }
 
         .rate {
             color: blue;
+        }
+
+        @media (min-width: 300px) {
+            .myitem {
+                background-color: #A5D6D9;
+                height: 180px;
+                margin-top: 2%;
+            }
+
+            .price {
+                font-size: 16px;
+            }
+
+            .desc {
+                width: 380px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .order-box {
+                width: 330px;
+                margin-bottom: 40px;
+            }
+
+            .mybtn {
+                width: 100px;
+                margin: auto;
+                display: block;
+                float: left;
+            }
+
+            .mybtn1 {
+                width: 100px;
+                margin: auto;
+                display: block;
+                background-color: #444444;
+                float: right;
+                border: 0;
+                outline: 0;
+            }
+
+            .mybtn2 {
+                width: 100px;
+                margin: auto;
+                display: block;
+                background-color: #999999;
+                border: 0;
+                outline: 0;
+            }
+
+            .wrap {
+                width: 330px;
+            }
+
+            .wrap1 {
+                width: 370px;
+                margin-right: 2%;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .myitem {
+                background-color: #A5D6D9;
+                height: 240px;
+                margin-left: 5%;
+                margin-right: 5%;
+                margin-top: 1%;
+            }
+
+            .price {
+                font-size: 16px;
+            }
+
+            .desc {
+                width: 500px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .order-box {
+                width: 500px;
+                margin-bottom: 40px;
+            }
+
+            .mybtn {
+                width: 100px;
+                margin: auto;
+                display: block;
+                float: left;
+            }
+
+            .mybtn1 {
+                width: 100px;
+                margin: auto;
+                display: block;
+                background-color: #444444;
+                float: right;
+                border: 0;
+                outline: 0;
+            }
+
+            .mybtn2 {
+                width: 100px;
+                margin: auto;
+                display: block;
+                background-color: #999999;
+                border: 0;
+                outline: 0;
+            }
+
+            .wrap {
+                width: 500px;
+                float: left;
+                margin-left: 7%;
+                margin-right: 5%;
+            }
+
+            .wrap1 {
+                width: 900px;
+                float: right;
+                margin-right: 7%;
+                margin-left: 5%;
+            }
         }
     </style>
     <script>
@@ -117,11 +264,11 @@
                             let phone = orders[i]['phone'];
 
                             let temp_html = `<tr>
-                                                 <th style="width: 18%; word-break: break-all" scope="row">${date}</th>
+                                                 <th style="width: 20%; word-break: break-all" scope="row">${date}</th>
                                                  <td style="width: 10%; word-break: break-all">${name}</td>
                                                  <td style="width: 8%; word-break: break-all">${count}</td>
-                                                 <td style="width: 24%; word-break: break-all">${address}</td>
-                                                 <td style="width: 40%; word-break: break-all">${phone}</td>
+                                                 <td style="width: 23%; word-break: break-all">${address}</td>
+                                                 <td style="width: 39%; word-break: break-all">${phone}</td>
                                               </tr>`
                             $('#orders-box').append(temp_html)
                         }
@@ -138,47 +285,62 @@
             document.getElementById("current_date").innerHTML = month + "/" + day + "/" + year;
         }
 
-        function account() {
-            let id = $('#account-id').val();
-            let pw = $('#account-pw').val();
-
-            $.ajax({
-                type: "POST",
-                url: "/login",
-                data: {id_give: id, pw_give: pw},
-                success: function (response) { // 성공하면
-                    if (response["result"] == "success") {
-                        alert(response["msg"]);
-                        window.location.reload();
-                    }
-                }
-            })
-        }
 
         function order() {
             let name = $('#order-name').val();
             let count = $('#order-count').val();
             let address = $('#order-address').val();
             let phone = $('#order-phone').val();
+            let code = $('#order-code').val();
 
             $.ajax({
                 type: "POST",
                 url: "/order",
-                data: {name_give: name, count_give: count, address_give: address, phone_give: phone},
+                data: {name_give: name, count_give: count, address_give: address, phone_give: phone, code_give: code},
                 success: function (response) { // 성공하면
                     if (response["result"] == "success") {
                         alert(response["msg"]);
                         window.location.reload();
                     }
+                    if (response["result"] == "fail") {
+                        alert(response["msg"]);
+                    }
+                }
+            })
+        }
+
+        function showPopup() {
+            const date = prompt("게시물 날짜")
+            const name = prompt("이름")
+            const code = prompt("코드")
+
+            let ddate = date;
+            let dname = name;
+            let dcode = code;
+
+            $.ajax({
+                type: "POST",
+                url: "/delete",
+                data: {date_give: ddate, name_give: dname, code_give: dcode},
+                success: function (response) { // 성공하면
+                    if (response["result"] == "success") {
+                        alert(response["msg"]);
+                        window.location.reload();
+                    }
+                    if (response["result"] == "fail") {
+                        alert(response["msg"]);
+                    }
                 }
             })
         }
     </script>
+
 </head>
 
 <body>
+<div class="myitem"></div>
 <div class="wrap">
-    <div class="myitem"></div>
+
     <div class="desc">
         <h1>나의 운동일지 <span class="price"><div id="current_date"></p>
             <script>
@@ -187,19 +349,20 @@ year = date.getFullYear();
 month = date.getMonth() + 1;
 day = date.getDate();
 document.getElementById("current_date").innerHTML = year + "/" + month + "/" + day;
-</script></span></h1>
+</script></div></span>
+        </h1>
         <p></p>
 
 
     </div>
-    <div class="login-form">
-        <form>
-            <input id="account-id" type="text" name="id" class="text-field" placeholder="아이디">
-            <input id="account-pw" type="password" name="password" class="text-field" placeholder="비밀번호">
-            <input type="submit" value="로그인" class="submit-btn">
-            <button onclick="account()" type="button" class="submit-btn">회원가입</button>
-        </form>
-    </div>
+    <!--    <div class="login-form">-->
+    <!--        <form>-->
+    <!--            <input id="account-id" type="text" name="id" class="text-field" placeholder="아이디">-->
+    <!--            <input id="account-pw" type="password" name="password" class="text-field" placeholder="비밀번호">-->
+    <!--            <input type="submit" value="로그인" class="submit-btn">-->
+    <!--            <button onclick="account()" type="button" class="submit-btn">회원가입</button>-->
+    <!--        </form>-->
+    <!--    </div>-->
     <p></p>
     <div class="order-box">
         <div class="input-group mb-3">
@@ -236,8 +399,18 @@ document.getElementById("current_date").innerHTML = year + "/" + month + "/" + d
             <input id="order-phone" type="text" class="form-control" aria-label="Default"
                    aria-describedby="inputGroup-sizing-default">
         </div>
-
-        <button onclick="order()" type="button" class="btn btn-primary mybtn">저장하기</button>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">코드</span>
+            </div>
+            <input id="order-code" type="text" class="form-control" aria-label="Default"
+                   aria-describedby="inputGroup-sizing-default">
+        </div>
+        <button id="save" onclick="order()" type="button" class="btn btn-primary mybtn">저장하기</button>
+        <p></p>
+        <button onclick="location.href='/'" type="button" class="btn btn-primary mybtn1">로그아웃</button>
+        <p></p>
+        <button id="delete" onclick="showPopup()" type="button" class="btn btn-primary mybtn2">삭제하기</button>
     </div>
 </div>
 <div class=wrap1>
@@ -252,7 +425,6 @@ document.getElementById("current_date").innerHTML = year + "/" + month + "/" + d
         </tr>
         </thead>
         <tbody id="orders-box">
-
         </tbody>
     </table>
 </div>

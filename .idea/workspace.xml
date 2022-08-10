@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f46d97a9-da9a-43f4-82ed-2de10ce8dd70" name="변경" comment="">
+    <list default="true" id="f46d97a9-da9a-43f4-82ed-2de10ce8dd70" name="변경" comment="a">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects1/onepage/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects1/onepage/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects1/onepage/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects1/onepage/templates/index.html" afterDir="false" />
@@ -14,8 +14,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -154,8 +154,22 @@
       <workItem from="1659875510944" duration="9864000" />
       <workItem from="1659887709716" duration="2950000" />
       <workItem from="1659890683761" duration="29000" />
-      <workItem from="1659890733523" duration="764000" />
+      <workItem from="1659890733523" duration="6001000" />
+      <workItem from="1659899720944" duration="4829000" />
+      <workItem from="1659917033578" duration="7707000" />
+      <workItem from="1660032391731" duration="20635000" />
+      <workItem from="1660058223825" duration="6122000" />
+      <workItem from="1660074133149" duration="2620000" />
+      <workItem from="1660108268947" duration="9317000" />
     </task>
+    <task id="LOCAL-00001" summary="a">
+      <created>1659891528925</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1659891528925</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,9 +186,13 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="a" />
+    <option name="LAST_COMMIT_MESSAGE" value="a" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/$hello.coverage" NAME="hello 커버리지 결과" MODIFIED="1653433281775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythonprac" />
-    <SUITE FILE_PATH="coverage/$app__1_.coverage" NAME="app (1) 커버리지 결과" MODIFIED="1659878472674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects1/onepage" />
+    <SUITE FILE_PATH="coverage/$app__1_.coverage" NAME="app (1) 커버리지 결과" MODIFIED="1660051598393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects1/onepage" />
     <SUITE FILE_PATH="coverage/$app.coverage" NAME="app 커버리지 결과" MODIFIED="1653433489954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/prac" />
   </component>
 </project>
