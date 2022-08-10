@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <title>운동일지</title>
+
+    <meta property="og:title" content="원페이지 쇼핑몰"/>
+    <meta property="og:description" content="내가 만든 첫 웹서비스!"/>
+    <meta property="og:image" content="{{ url_for('static', filename='ogimage.jpeg') }}"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url("https://blog.kakaocdn.net/dn/zoHzj/btq8jcydnzH/QiHQFXDTwJevJqiWVHpXVK/img.jpg") no-repeat center;
+            background-size: cover;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, .6);
+        }
+
+         .login-form {
+            position: relative;
+            z-index: 2;
+        }
+
+        .login-form h1 {
+            font-size: 32px;
+            color: white;
+            text-align: center;
+        }
+
+
+    </style>
+
+    <script>
+        function account() {
+            let id = $('#account-id').val();
+            let pw = $('#account-pw').val();
+            let name = $('#account-pw1').val();
+
+            $.ajax({
+                type: "POST",
+                url: "/login",
+                data: {id_give: id, pw_give: pw, pw1_give: name},
+                success: function (response) { // 성공하면
+                    if (response["result"] == "success") {
+                        alert(response["msg"]);
+                        location.href='/';
+                    }
+                    if (response["result"] == "fail") {
+                        alert(response["msg"]);
+                    }
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    <div class="login-form">
+    <form>
+        <h1 style="color: lightgray; font-size:30px">운동일지</h1>
+        <br>
+        <input id="account-id" type="text" name="id" class="text-field" placeholder="아이디"
+               style="width: 400px; padding: 20px 10px 10px; background-color: transparent; border: none; border-bottom: 1px solid #999; font-size: 18px; color: #fff">
+        <p></p>
+        <input id="account-pw" type="password" name="password" class="text-field" placeholder="비밀번호"
+               style="width: 400px; padding: 20px 10px 10px; background-color: transparent; border: none; border-bottom: 1px solid #999; font-size: 18px; color: #fff">
+        <p></p>
+        <input id="account-pw1" type="password" name="password" class="text-field" placeholder="비밀번호 확인"
+               style="width: 400px; padding: 20px 10px 10px; background-color: transparent; border: none; border-bottom: 1px solid #999; font-size: 18px; color: #fff">
+         <script>
+            const input = document.getElementById("account-pw1");
+
+            input.addEventListener("keypress", function (event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    document.getElementById("account_to").click();
+                }
+            });
+        </script>
+        <p></p><br>
+        <button id="account_to" onclick="account();" type="button" class="submit-btn"
+                style="background: #166cea; border: none; color: #fff; font-size: 20px; width: 100%; height: 40px; border-radius: 25px">회원가입
+        </button>
+        <p></p><br>
+        <button onclick="location.href='/'" type="button" class="submit-btn"
+                style="background-color: transparent; border: none; color: lightgrey; font-size: 15px; width: 100%; height: 40px;">돌아가기
+        </button>
+    </form>
+    </div>
+</body>
+</html>
