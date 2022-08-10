@@ -102,8 +102,6 @@ def save_order():
         return jsonify({'result': 'fail', 'msg': '점수를 입력하세요'})
     elif address_receive == "":
         return jsonify({'result': 'fail', 'msg': '종목을 적으세요'})
-    elif phone_receive == "":
-        return jsonify({'result': 'fail', 'msg': '메모를 입력하세요'})
     elif code_receive == "":
         return jsonify({'result': 'fail', 'msg': '삭제코드를 입력하세요'})
     else:
